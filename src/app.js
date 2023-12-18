@@ -50,7 +50,7 @@ app.get('/addmessages', (req, res) => {
   res.render('addmessages');
 });
 
-
+// ajouter message
 app.post('/addmessages', async (req, res) => {
   try {
     const {sender, sendto, message} = req.body;
