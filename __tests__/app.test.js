@@ -1,5 +1,5 @@
 const request = require('supertest');
-const {app} = require('../src/app');
+const app = require('../src/app');
 
 describe('Tests des endpoints', () => {
   it('Devrait retourner les messages via GET /messages', async () => {
