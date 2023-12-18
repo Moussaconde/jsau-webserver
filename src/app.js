@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-const port = 3001;
+
 const messagesFile = 'messages.json';
 
 
@@ -97,10 +97,4 @@ app.delete('/messages/:id', (req, res) => {
       });
 });
 
-module.exports = {
-  app,
-};
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+module.exports = app;
