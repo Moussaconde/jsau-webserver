@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-
+const port = 3001;
 const messagesFile = 'messages.json';
 
 
@@ -50,7 +50,7 @@ app.get('/addmessages', (req, res) => {
   res.render('addmessages');
 });
 
-// ajouter message
+
 app.post('/addmessages', async (req, res) => {
   try {
     const {sender, sendto, message} = req.body;
@@ -97,4 +97,10 @@ app.delete('/messages/:id', (req, res) => {
       });
 });
 
-module.exports = app;
+module.exports = {
+  app,
+};
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});

@@ -2,10 +2,10 @@
   "name": "jsau-webserver",
   "version": "1.0.0",
   "description": "",
-  "main": "src/start.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "node src/start.js",
+    "start": "node src/app.js",
     "start:watch": "nodemon",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
