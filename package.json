@@ -1,0 +1,55 @@
+{
+  "name": "jsau-webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node src/app.js",
+    "start:watch": "nodemon",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "pretest:ci": "npm run lint",
+    "posttest": "npm run lint",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.sorbonne-paris-nord.fr:11608831/jsau-webserver.git"
+  },
+  "author": "Moussa CONDE",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.20.2",
+    "ejs": "3.1.9",
+    "express": "4.18.2",
+    "morgan": "1.10.0",
+    "zlib": "1.0.5"
+  },
+  "devDependencies": {
+    "assert": "2.1.0",
+    "browserify-zlib": "0.2.0",
+    "buffer": "6.0.3",
+    "chai": "4.3.10",
+    "crypto-browserify": "3.12.0",
+    "css-loader": "6.8.1",
+    "eslint": "8.55.0",
+    "eslint-config-google": "0.14.0",
+    "eslint-config-usecases": "3.1.0",
+    "file-loader": "6.2.0",
+    "https-browserify": "1.0.0",
+    "jest": "29.7.0",
+    "nodemon": "3.0.1",
+    "nyc": "15.1.0",
+    "path-browserify": "1.0.1",
+    "querystring-es3": "0.2.1",
+    "stream-browserify": "3.0.0",
+    "stream-http": "3.2.0",
+    "style-loader": "3.3.3",
+    "supertest": "6.3.3",
+    "url": "0.11.3",
+    "util": "0.12.5",
+    "webpack": "5.89.0",
+    "webpack-cli": "5.1.4"
+  }
+}

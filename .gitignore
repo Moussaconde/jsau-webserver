@@ -1,0 +1,35 @@
+# Dossiers spécifiques à Node.js
+node_modules/
+.nyc_output
+
+# Fichiers de logs
+logs/
+*.log
+messages.json
+
+# Les fichiers générés
+coverage/
+dist/
+.build/
+.cache/
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+.env.test
+.env.prod
+
+# Cache npm
+.npm
+
+# Fichiers de sauvegarde
+*.bak
+*.swp
+
+# Fichiers de configuration spécifiques à l'éditeur ou à l'IDE
+.idea/
+.vscode/
+
+
+

@@ -1,0 +1,14 @@
+stages:
+  - test
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm/
+test:
+  image: node:16.17.0
+  stage: test
+  script:
+    - npm ci  --cache .npm --prefer-offline --no-audit
+    - npm test
+  coverage:  /All files\s+\|\s+([\d.]+)\s+\|\s+([\d.]+)\s+\|\s+([\d.]+)\s+\|\s+([\d.]+)/
+    

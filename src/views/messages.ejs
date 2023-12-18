@@ -1,0 +1,77 @@
+<!-- messages.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .message-info {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .message-sender {
+            color: blue;
+        }
+        .message-id {
+            color: gray;
+        }
+        .message-content {
+            margin-top: 5px;
+        }
+        .no-messages {
+            font-style: italic;
+            color: #888;
+        }
+        .add-message-link {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste des messages</h1>
+    
+    <% if (messages.length > 0) { %>
+        <ul>
+            <% messages.forEach(message => { %>
+                <li>
+                    <div class="message-info message-sender">
+                        From: <%= message.sender %>
+                    </div>
+                    <div class="message-info">
+                        To: <%= message.sendto %>
+                    </div>
+                    <div class="message-info message-id">
+                        ID: <%= message.id %>
+                    </div>
+                    <div class="message-content">
+                        Message: <%= message.message %>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p class="no-messages">Aucun message disponible pour le moment.</p>
+    <% } %>
+    
+    <!-- Lien pour ajouter un nouveau message -->
+    <a href="/addmessages" class="add-message-link">Ajouter un nouveau message</a>
+</body>
+</html>
